@@ -67,6 +67,19 @@ body{
 main{
     flex-grow: 1;
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden
+}
 .container{
     width: 100%;
     max-width: 1392px;
@@ -91,7 +104,6 @@ main{
 }
 
 .nav__list{
-
     position: absolute;
     top: 100px;
     left: 0;
@@ -125,6 +137,10 @@ main{
     background-color: #FBD600;
     border-radius: 28px;
     text-decoration: none;  
+}
+.nav__item:last-child .nav__link:hover{
+    background-color: #fff;
+    opacity: 0.25;
 }
 
 .site-btn{
@@ -249,6 +265,143 @@ main{
     padding: 0;
 }
 
+.cln-box__tlt{
+    margin: 0;
+    margin-bottom: 160px;
+    font-family: 'Fraunces 9pt Soft';
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 4px;
+    color: #A7AAAD;    
+}
+
+
+
+.cln-box__list{
+    padding: 0 24px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 170px;
+}
+
+.cln-box__item{
+    position: relative;
+    margin: 0 auto;
+    max-width: 327px;
+}
+
+.cln-box__img{
+    position: absolute;
+    top: -60%;
+    left: 40%;
+}
+
+.cln-box__info{
+    margin: 0;
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: -0.128571px;
+    color: #5B636D;    
+}
+
+.cln-box__name{
+    display: block;
+    font-family: 'Fraunces 9pt Soft';
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.128571px;
+    color: #24303E;
+    text-decoration: none;
+}
+.cln-box__job{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: -0.1px;
+    color: #A7AAAD;
+    
+}
+.img-section{
+    padding-top: 86px;
+}
+.flex-img{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+.flex-img__box{
+    position: relative;
+    top: 4px;
+}
+.flex-img__box--active{
+    position: relative;
+    top: 7px;
+}
+.flex-img__img{
+    width: 100%;
+}
+
+.site-footer{
+    padding: 64px 39px 80px 39px;
+    background-color: #90D4C6;
+}
+
+.footer-box{
+    max-width: 297px;
+    margin: 0 auto;
+}
+.footer-box__logo{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+
+.footer-box__list{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 88px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.footer-box__link{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.128571px;
+    color: #458D7E;    
+    text-decoration: none;
+}
+
+.footer-box__link:hover{
+    color: #fff;
+}
+.footer-box__symbls{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer-box__sym-link{
+    color: #2C7566;
+    text-decoration: none;
+}
+
+.footer-box__sym-link:hover{
+    color: #fff;
+}
+
 @media only screen and (min-width: 670px) {
     .site-nav{
         display: block;
@@ -270,6 +423,8 @@ main{
     .nav__link{
         color:#FFFFFF;
     }
+
+
 }
 
 @media screen and (min-width: 950px) {
@@ -314,7 +469,7 @@ main{
 
     }
     .chgs-box__item-tlt{
-        padding-top: 65px;
+        padding-top: 35px;
     }
     .chgs-box__item-img{
         width: 50%;
@@ -366,6 +521,37 @@ main{
         margin: 0 auto;
         text-align: center;
         width: 50%;
+    }
+
+    .cln-box__list{
+        flex-direction: row;
+        gap: 30px;
+    }
+    .cln-box__tlt{
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 210px;
+    }
+    .changes-section{
+        padding-bottom: 160px;
+    }
+    .flex-img{
+        grid-template-rows: 447px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .flex-img__img{
+        width: 100%;
+        height: 445px;
+        object-fit: cover;
+    }
+    .flex-img__box{
+        position: relative;
+        top: 3px;
+    }
+    .flex-img__box--active{
+        position: relative;
+        top: 3px;
     }
 
 }
